@@ -1,0 +1,22 @@
+bootargs=mem=37M console=ttyAMA0,115200 root=/dev/mtdblock3 rootfstype=squashfs mtdparts=hi_sfc:256K(boot),64K(env),2560K(kernel),4096K(rootfs),5312K(config),-(userfs) ip=192.168.1.200:192.168.1.199:192.168.1.1:255.255.255.0:UlifeCam:eth0:off
+bootcmd=sf probe 0;sf read 0x82000000 0x50000 0x280000;bootm 0x82000000
+bootdelay=1
+ethaddr=00:00:23:34:45:66
+ipaddr=192.168.1.188
+serverip=192.168.1.199
+netmask=255.255.255.0
+bootfile="uImage"
+pin=192.168.88.122
+vkernel=20160905153920
+kernelver=20160905153920
+vuboot=20160905153920
+ubootver=20160905153920
+vsquashfs=010
+squashfsver=010
+id=Z99742100000666
+stdin=serial
+stdout=serial
+stderr=serial
+verify=n
+ver=U-Boot 2010.06 (Aug 21 2018 - 18:31:32)
+

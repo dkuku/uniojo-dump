@@ -1,0 +1,226 @@
+./Project_OpenIPC.sh 18ev200_switcam_hs303_rotek                                                                                                                          ✔  1m 10s   1 ☑  3  
+
+Start building OpenWrt firmware for 18ev200_switcam_hs303_rotek with kernel 3.4.35
+Updating feed 'futurum' from 'https://github.com/OpenIPC/packages.git' ...
+Already up to date.
+Create index file './feeds/futurum.index' 
+fatal: No names found, cannot describe anything.
+fatal: No names found, cannot describe anything.
+fatal: No names found, cannot describe anything.
+Updating feed 'glutinium' from 'https://github.com/ZigFisher/Glutinium.git' ...
+Already up to date.
+Create index file './feeds/glutinium.index' 
+fatal: No names found, cannot describe anything.
+fatal: No names found, cannot describe anything.
+fatal: No names found, cannot describe anything.
+Updating feed 'openipc' from 'https://github.com/OpenIPC/OpenIPC_custom_repo.git' ...
+Already up to date.
+Create index file './feeds/openipc.index' 
+fatal: No names found, cannot describe anything.
+fatal: No names found, cannot describe anything.
+fatal: No names found, cannot describe anything.
+fatal: No names found, cannot describe anything.
+fatal: No names found, cannot describe anything.
++ mkdir -p /home/me/Projects/OpenIPC/staging_dir/toolchain-arm_arm926ej-s_gcc-4.8-linaro_uClibc-0.9.33.2_eabi
++ cd /home/me/Projects/OpenIPC/staging_dir/toolchain-arm_arm926ej-s_gcc-4.8-linaro_uClibc-0.9.33.2_eabi
++ ln -nsf lib lib64
++ ln -nsf lib lib32
++ mkdir -p stamp lib usr/include usr/lib
+make[1]: Entering directory '/home/me/Projects/OpenIPC'
+rm -rf /home/me/Projects/OpenIPC/build_dir/target-arm_arm926ej-s_uClibc-0.9.33.2_eabi /home/me/Projects/OpenIPC/staging_dir/target-arm_arm926ej-s_uClibc-0.9.33.2_eabi /home/me/Projects/OpenIPC/bin/hi35xx /home/me/Projects/OpenIPC/logs
+make[1]: Leaving directory '/home/me/Projects/OpenIPC'
+fatal: No names found, cannot describe anything.
+fatal: No names found, cannot describe anything.
+fatal: No names found, cannot describe anything.
+make[1]: Entering directory '/home/me/Projects/OpenIPC'
+make[2]: Entering directory '/home/me/Projects/OpenIPC'
+make[2]: Entering directory '/home/me/Projects/OpenIPC'
++ mkdir -p /home/me/Projects/OpenIPC/staging_dir/target-arm_arm926ej-s_uClibc-0.9.33.2_eabi
++ mkdir -p /home/me/Projects/OpenIPC/staging_dir/host
++ cd /home/me/Projects/OpenIPC/staging_dir/target-arm_arm926ej-s_uClibc-0.9.33.2_eabi
++ mkdir -p bin lib include stamp
++ cd /home/me/Projects/OpenIPC/staging_dir/host
++ mkdir -p bin lib include stamp
+mkdir -p /home/me/Projects/OpenIPC/build_dir/target-arm_arm926ej-s_uClibc-0.9.33.2_eabi/stamp
+mkdir -p /home/me/Projects/OpenIPC/build_dir/host/stamp /home/me/Projects/OpenIPC/staging_dir/host/include/sys
+install -m0644 /home/me/Projects/OpenIPC/tools/include/*.h /home/me/Projects/OpenIPC/staging_dir/host/include/
+touch /home/me/Projects/OpenIPC/staging_dir/target-arm_arm926ej-s_uClibc-0.9.33.2_eabi/.prepared
+install -m0644 /home/me/Projects/OpenIPC/tools/include/sys/*.h /home/me/Projects/OpenIPC/staging_dir/host/include/sys/
+ln -sf lib /home/me/Projects/OpenIPC/staging_dir/host/lib64
+touch /home/me/Projects/OpenIPC/staging_dir/host/.prepared
+rm -rf /home/me/Projects/OpenIPC/staging_dir/target-arm_arm926ej-s_uClibc-0.9.33.2_eabi/root-hi35xx
+make[2]: Leaving directory '/home/me/Projects/OpenIPC'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/sstrip'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/patch'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/make-ext4fs'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/firmware-utils'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/patch-image'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/sstrip'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/flock'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/patch'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/make-ext4fs'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/firmware-utils'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/patch'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/patch-image'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/sstrip'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/make-ext4fs'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/firmware-utils'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/flock'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/sstrip'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/patch-image'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/flock'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/patch'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/firmware-utils'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/make-ext4fs'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/sed'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/m4'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/xz'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/patch-image'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/flock'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/zlib'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/yaffs2'
+make  --jobserver-auth=3,4 -j -C /home/me/Projects/OpenIPC/build_dir/host/m4-1.4.18  
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/sed'
+make[4]: warning: -j0 forced in submake: resetting jobserver mode.
+make[4]: Entering directory '/home/me/Projects/OpenIPC/build_dir/host/m4-1.4.18'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/cmake'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/xz'
+make  all-recursive
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/scons'
+make[5]: Entering directory '/home/me/Projects/OpenIPC/build_dir/host/m4-1.4.18'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/zlib'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/yaffs2'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/lzma'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/sed'
+Making all in .
+make[6]: Entering directory '/home/me/Projects/OpenIPC/build_dir/host/m4-1.4.18'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/scons'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/xz'
+make[6]: Nothing to be done for 'all-am'.
+make[6]: Leaving directory '/home/me/Projects/OpenIPC/build_dir/host/m4-1.4.18'
+Making all in examples
+make[6]: Entering directory '/home/me/Projects/OpenIPC/build_dir/host/m4-1.4.18/examples'
+make[6]: Nothing to be done for 'all'.
+make[6]: Leaving directory '/home/me/Projects/OpenIPC/build_dir/host/m4-1.4.18/examples'
+Making all in lib
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/sed'
+make[6]: Entering directory '/home/me/Projects/OpenIPC/build_dir/host/m4-1.4.18/lib'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/lzma'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/zlib'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/mkimage'
+make  all-am
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/xz'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/yaffs2'
+make[7]: Entering directory '/home/me/Projects/OpenIPC/build_dir/host/m4-1.4.18/lib'
+depbase=`echo c-stack.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc  -I.   -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include  -O2 -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include -MT c-stack.o -MD -MP -MF $depbase.Tpo -c -o c-stack.o c-stack.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo gl_avltree_oset.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc  -I.   -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include  -O2 -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include -MT gl_avltree_oset.o -MD -MP -MF $depbase.Tpo -c -o gl_avltree_oset.o gl_avltree_oset.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo binary-io.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc  -I.   -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include  -O2 -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include -MT binary-io.o -MD -MP -MF $depbase.Tpo -c -o binary-io.o binary-io.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo clean-temp.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc  -I.   -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include  -O2 -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include -MT clean-temp.o -MD -MP -MF $depbase.Tpo -c -o clean-temp.o clean-temp.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo cloexec.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc  -I.   -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include  -O2 -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include -MT cloexec.o -MD -MP -MF $depbase.Tpo -c -o cloexec.o cloexec.c &&\
+mv -f $depbase.Tpo $depbase.Po
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/cmake'
+depbase=`echo close-stream.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc  -I.   -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include  -O2 -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include -MT close-stream.o -MD -MP -MF $depbase.Tpo -c -o close-stream.o close-stream.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo closein.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc  -I.   -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include  -O2 -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include -MT closein.o -MD -MP -MF $depbase.Tpo -c -o closein.o closein.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo closeout.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc  -I.   -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include  -O2 -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include -MT closeout.o -MD -MP -MF $depbase.Tpo -c -o closeout.o closeout.c &&\
+mv -f $depbase.Tpo $depbase.Po
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/scons'
+depbase=`echo dirname.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc  -I.   -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include  -O2 -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include -MT dirname.o -MD -MP -MF $depbase.Tpo -c -o dirname.o dirname.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo dirname-lgpl.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc  -I.   -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include  -O2 -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include -MT dirname-lgpl.o -MD -MP -MF $depbase.Tpo -c -o dirname-lgpl.o dirname-lgpl.c &&\
+mv -f $depbase.Tpo $depbase.Po
+In file included from /usr/include/signal.h:328,
+                 from ./signal.h:52,
+                 from c-stack.c:49:
+c-stack.c:55:26: error: missing binary operator before token "("
+   55 | #elif HAVE_LIBSIGSEGV && SIGSTKSZ < 16384
+      |                          ^~~~~~~~
+depbase=`echo execute.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc  -I.   -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include  -O2 -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include -MT execute.o -MD -MP -MF $depbase.Tpo -c -o execute.o execute.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo exitfail.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc  -I.   -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include  -O2 -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include -MT exitfail.o -MD -MP -MF $depbase.Tpo -c -o exitfail.o exitfail.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo fatal-signal.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc  -I.   -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include  -O2 -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include -MT fatal-signal.o -MD -MP -MF $depbase.Tpo -c -o fatal-signal.o fatal-signal.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo fd-hook.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc  -I.   -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include  -O2 -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include -MT fd-hook.o -MD -MP -MF $depbase.Tpo -c -o fd-hook.o fd-hook.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo fd-safer-flag.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc  -I.   -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include  -O2 -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include -MT fd-safer-flag.o -MD -MP -MF $depbase.Tpo -c -o fd-safer-flag.o fd-safer-flag.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo dup-safer-flag.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc  -I.   -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include  -O2 -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include -MT dup-safer-flag.o -MD -MP -MF $depbase.Tpo -c -o dup-safer-flag.o dup-safer-flag.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo filenamecat.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc  -I.   -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include  -O2 -I/home/me/Projects/OpenIPC/staging_dir/host/include -I/home/me/Projects/OpenIPC/staging_dir/host/usr/include -MT filenamecat.o -MD -MP -MF $depbase.Tpo -c -o filenamecat.o filenamecat.c &&\
+mv -f $depbase.Tpo $depbase.Po
+make[7]: *** [Makefile:1910: c-stack.o] Error 1
+make[7]: *** Waiting for unfinished jobs....
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/zlib'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/lzma'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/yaffs2'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/squashfs4'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/scons'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/pkg-config'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/mkimage'
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/cmake'
+make -C /home/me/Projects/OpenIPC/build_dir/host/squashfskit-v4.14/squashfs-tools XZ_SUPPORT=1 LZMA_XZ_SUPPORT=1 XATTR_SUPPORT=1 LZMA_LIB="/home/me/Projects/OpenIPC/staging_dir/host/lib/liblzma.a" EXTRA_CFLAGS="-I/home/me/Projects/OpenIPC/staging_dir/host/include" mksquashfs unsquashfs
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/lzma'
+make[4]: Entering directory '/home/me/Projects/OpenIPC/build_dir/host/squashfskit-v4.14/squashfs-tools'
+./version.sh
+make[3]: Entering directory '/home/me/Projects/OpenIPC/tools/mkimage'
+Writing squashfs-tools/version.h
+make[7]: Leaving directory '/home/me/Projects/OpenIPC/build_dir/host/m4-1.4.18/lib'
+make[6]: *** [Makefile:1674: all] Error 2
+make[6]: Leaving directory '/home/me/Projects/OpenIPC/build_dir/host/m4-1.4.18/lib'
+make[5]: *** [Makefile:1572: all-recursive] Error 1
+make[5]: Leaving directory '/home/me/Projects/OpenIPC/build_dir/host/m4-1.4.18'
+make[4]: *** [Makefile:1528: all] Error 2
+make[4]: Leaving directory '/home/me/Projects/OpenIPC/build_dir/host/m4-1.4.18'
+make[3]: *** [Makefile:30: /home/me/Projects/OpenIPC/build_dir/host/m4-1.4.18/.built] Error 2
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/m4'
+make[2]: *** [tools/Makefile:123: tools/m4/compile] Error 2
+make[2]: *** Waiting for unfinished jobs....
+cc -I/home/me/Projects/OpenIPC/staging_dir/host/include -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DLZMA_SUPPORT -DXZ_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT   -c -o mksquashfs.o mksquashfs.c
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/pkg-config'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/mkimage'
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/cmake'
+cc   mksquashfs.o read_fs.o action.o swap.o pseudo.o compressor.o sort.o progressbar.o read_file.o info.o restore.o process_fragments.o caches-queues-lists.o gzip_wrapper.o lzma_xz_wrapper.o xz_wrapper.o lzma_xz_options.o /home/me/Projects/OpenIPC/staging_dir/host/lib/liblzma.a xattr.o read_xattrs.o -lpthread -lm -lz -o mksquashfs
+/usr/bin/ld: /home/me/Projects/OpenIPC/staging_dir/host/lib/liblzma.a(liblzma_la-check.o): in function `lzma_check_init':
+check.c:(.text+0x75): undefined reference to `SHA256Init'
+/usr/bin/ld: /home/me/Projects/OpenIPC/staging_dir/host/lib/liblzma.a(liblzma_la-check.o): in function `lzma_check_update':
+check.c:(.text+0xbf): undefined reference to `SHA256Update'
+/usr/bin/ld: /home/me/Projects/OpenIPC/staging_dir/host/lib/liblzma.a(liblzma_la-check.o): in function `lzma_check_finish':
+check.c:(.text+0x115): undefined reference to `SHA256Final'
+collect2: error: ld returned 1 exit status
+make[4]: *** [Makefile:257: mksquashfs] Error 1
+make[4]: Leaving directory '/home/me/Projects/OpenIPC/build_dir/host/squashfskit-v4.14/squashfs-tools'
+make[3]: *** [Makefile:42: /home/me/Projects/OpenIPC/build_dir/host/squashfskit-v4.14/.built] Error 2
+make[3]: Leaving directory '/home/me/Projects/OpenIPC/tools/squashfs4'
+make[2]: *** [tools/Makefile:123: tools/squashfs4/compile] Error 2
+make[2]: Leaving directory '/home/me/Projects/OpenIPC'
+make[1]: *** [tools/Makefile:121: /home/me/Projects/OpenIPC/staging_dir/target-arm_arm926ej-s_uClibc-0.9.33.2_eabi/stamp/.tools_install_yynyynynynyyyyyyyyynyyyyyyyyynyyyyynnyyynnyynnnyyy] Error 2
+make[1]: Leaving directory '/home/me/Projects/OpenIPC'
+make: *** [/home/me/Projects/OpenIPC/include/toplevel.mk:183: world] Error 2
+
+real    0m6.704s
+user    0m9.140s
+sys     0m2.277s
+
