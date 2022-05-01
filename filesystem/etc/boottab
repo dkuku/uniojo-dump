@@ -1,0 +1,109 @@
+#!/bin/sh
+bootflag="`ps | grep boottab | wc -l`"
+bootflag="`ps | grep boottab | wc -l`"
+if [ $bootflag -gt 4 ]
+then
+	echo "boottab has been start!"
+	exit 1
+fi 
+
+EXEC_PATH="`dirname $0`"
+killall -9 syslogd
+killall -9 vs_auto.sh
+killall -9 vs_server
+sleep 1
+
+#mount tmpfs
+TMPFS_PATH=/bin/vs/tmpfs
+mkdir -p $TMPFS_PATH
+mount tmpfs $TMPFS_PATH -t tmpfs -o size=10m
+touch $TMPFS_PATH/auto.jpg
+
+rm /var/log/syslog.txt
+rm /var/log/accesslog.txt
+touch /bin/vs/tmpfs/syslog.txt
+touch /bin/vs/tmpfs/accesslog.txt
+ln -s /bin/vs/tmpfs/syslog.txt /var/log/syslog.txt
+ln -s /bin/vs/tmpfs/accesslog.txt /var/log/accesslog.txt
+#log when start
+LOGINFO="`date` BOOTTAB: System Start!"
+echo "$LOGINFO" >> /var/log/syslog.txt
+
+Config_Tz_Pathsrc=/etc/ipcamera/TZ
+Config_Tz_PathDest=/etc/TZ
+
+
+if [ ! -L $Config_Tz_PathDest ]
+then
+    rm $Config_Tz_PathDest
+    ln -s $Config_Tz_Pathsrc $Config_Tz_PathDest
+fi
+
+sleep 1
+echo "[boottab]sync time from RTC"
+/bin/vs/setTime
+
+#start syslogd
+syslogd -m 0 -O /var/log/syslog.txt -S -s 100 -b 0 &
+
+if [ -e /var/log/syslog.txt ]
+then
+	chmod 666 /var/log/syslog.txt
+else
+	echo "/var/log/syslog.txt not exist,then will creat this file!"
+	touch /var/log/syslog.txt
+	chmod 666 /var/log/syslog.txt
+fi
+
+if [ -e /var/log/accesslog.txt ]
+then
+	chmod 666 /var/log/accesslog.txt
+else
+	echo "/var/log/accesslog.txt not exist,then will creat this file!"
+	touch /var/log/accesslog.txt
+	chmod 666 /var/log/accesslog.txt
+fi
+
+rm /bin/vs/log/syslog.txt
+rm /bin/vs/log/accesslog.txt
+#creat link to the log of access and syslog
+ACCESSLOG_PATH=/var/log/accesslog.txt
+SYSLOG_PATH=/var/log/syslog.txt
+ACCESSLOG_LNPATH=/bin/vs/log/accesslog.txt
+SYSLOG_LNPATH=/bin/vs/log/syslog.txt
+
+if [ -f $ACCESSLOG_PATH ] && [ ! -L $ACCESSLOG_LNPATH ]
+then
+    ln -s $ACCESSLOG_PATH $ACCESSLOG_LNPATH
+fi
+
+if [ -f $SYSLOG_PATH ] && [ ! -L $SYSLOG_LNPATH ]
+then
+    ln -s $SYSLOG_PATH $SYSLOG_LNPATH
+fi
+
+#start lo for upnp
+ifconfig lo up
+
+#check network card eth0 and config network
+/bin/vs/cgi-bin/init_net 
+
+#start crond
+
+#start Telnetd
+
+#start FTPD
+
+#========= start SD Detect ====================
+echo "[boottab]start sdcard detecter"
+#/bin/vs/sd_detect &
+
+#add hostname
+hostname hisilicon
+
+#start the program of app
+/bin/vs/vs_auto.sh
+
+#log when stop                                                              
+LOGINFO="`date` BOOTTAB: System Stop!"                                         
+echo "$LOGINFO" >> /var/log/syslog.txt

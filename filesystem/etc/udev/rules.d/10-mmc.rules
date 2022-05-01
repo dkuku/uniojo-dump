@@ -1,0 +1,14 @@
+#SD卡挂载
+ACTION!="add",GOTO="farsight"
+	KERNEL=="mmcblk[0-9]p[0-9]",RUN+="/opt/ipnc/mount-sd.sh %k"
+	LABEL="farsight"
+
+#SD卡卸载 
+ACTION !="remove",GOTO="farsight"
+	SUBSYSTEM!="block",GOTO="farsight"
+	KERNEL=="mmcblk[0-9]*",RUN+="/opt/ipnc/umount-sd.sh"
+	LABEL="farsight"
+
+ACTION!="add",GOTO="farsight"
+	ENV{NPARTS}=="0" KERNEL=="mmcblk[0-9]*",RUN+="/opt/ipnc/mount-sd.sh %k"
+	LABEL="farsight"
